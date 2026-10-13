@@ -70,7 +70,7 @@ def load_dataset(
                 records.append(student)
         except (csv.Error, UnicodeError) as error:
             raise ValueError(
-                f"{source}: line {reader.line_num}: malformed CSV: {error}"
+                f"{source}: line {reader.reader.line_num}: malformed CSV: {error}"
             ) from error
 
     try:
