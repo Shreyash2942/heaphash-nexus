@@ -1,0 +1,18 @@
+# Python environments, bytecode, and test artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local knowledge-graph artifacts
+graphify-out/
+.graphify*

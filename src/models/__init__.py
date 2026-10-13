@@ -1,0 +1,1 @@
+"""Shared student data model."""
