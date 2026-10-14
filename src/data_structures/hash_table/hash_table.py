@@ -4,6 +4,7 @@ from typing import Generic, TypeVar
 
 from src.config.settings import HASH_TABLE_SIZE
 from src.data_structures.hash_table.helpers.hash_function import hash_function
+from src.data_structures.hash_table.operations.insert import insert as insert_into_bucket
 
 ValueT = TypeVar("ValueT")
 
@@ -36,3 +37,9 @@ class HashTable(Generic[ValueT]):
 
     def __len__(self) -> int:
         return self._item_count
+
+    def insert(self, key: int, value: ValueT) -> None:
+        """Store a pair, replacing an existing key without increasing the count."""
+        index = hash_function(key, self._table_size)
+        if insert_into_bucket(self._buckets[index], key, value):
+            self._item_count += 1
