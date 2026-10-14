@@ -1,6 +1,6 @@
 # Data Model
 
-`DataItem` represents a student shared by dataset handling and the future data structures. Its fields are `student_id`, `name`, `program`, and `priority`.
+`DataItem` represents a student shared by dataset handling, the hash table, and the planned priority queue. Its fields are `student_id`, `name`, `program`, and `priority`.
 
 ```text
 models/

@@ -1,15 +1,18 @@
 # Hash Table Operations
 
-This package will contain insertion, search, and deletion logic during Day 2. It currently contains only the package initializer.
+This package implements insertion, search, and deletion within one bucket's collision chain. `HashTable` selects the bucket and maintains the overall item count.
 
 ```text
 operations/
-|-- README.md     # Planned hash-table operations
-`-- __init__.py   # Makes operations a Python package
+|-- README.md     # Internal chain operation contracts
+|-- __init__.py   # Makes operations a Python package
+|-- insert.py     # Appends a new key or replaces the value for an existing key
+|-- search.py     # Returns the matching value or None
+`-- delete.py     # Removes one matching pair while preserving other entries
 ```
 
-Planned modules are `insert.py`, `search.py`, and `delete.py`. Insertion will update an existing key instead of adding a duplicate. Search will return `None` for a missing key. Deletion must preserve other records in the same collision chain.
+The internal `insert()` helper returns `True` for a new key and `False` for an update. The internal `delete()` helper returns whether it removed an entry. The owning table uses these flags to adjust its count exactly once. Search and deletion check each key rather than assuming the first chain entry matches.
 
-Callers will use the future `HashTable` interface rather than changing buckets directly.
+Application callers should use `table.insert()`, `table.search()`, and `table.delete()` rather than calling these internal helpers or changing buckets directly. The public insert method returns `None`.
 
 [Hash table](../README.md)

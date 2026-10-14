@@ -16,6 +16,10 @@ class HashTable(Generic[ValueT]):
 
     Each bucket is a distinct list of ``(key, value)`` pairs. Values may be
     student records or other objects; no Python dict stores the entries.
+    Search, insertion, and deletion take O(1 + chain length) time. With
+    well-distributed keys and a bounded load factor this is O(1) on average;
+    a chain containing all entries gives O(n) worst-case behavior. The table
+    does not resize automatically.
     """
 
     def __init__(self, table_size: int = HASH_TABLE_SIZE) -> None:
@@ -36,6 +40,21 @@ class HashTable(Generic[ValueT]):
     def item_count(self) -> int:
         """Number of distinct keys currently stored."""
         return self._item_count
+
+    @property
+    def load_factor(self) -> float:
+        """Ratio of stored entries to buckets; may exceed 1 with chaining."""
+        return self._item_count / self._table_size
+
+    @property
+    def buckets(self) -> tuple[tuple[tuple[int, ValueT], ...], ...]:
+        """Return an immutable snapshot for inspection without exposing lists.
+
+        Bucket containers are copied, but value objects are shared. Student
+        DataItem values are immutable. Creating a snapshot takes O(m + n)
+        for m buckets and n stored entries.
+        """
+        return tuple(tuple(bucket) for bucket in self._buckets)
 
     def __len__(self) -> int:
         return self._item_count
@@ -62,3 +81,21 @@ class HashTable(Generic[ValueT]):
             self._item_count -= 1
             return True
         return False
+
+    def statistics(self) -> dict[str, int | float]:
+        """Report current occupancy in O(table_size) time.
+
+        collision_count counts current entries beyond the first in each
+        occupied bucket, not historical insertion events. A dict formats
+        the returned report only; entries remain stored in bucket lists.
+        """
+        occupied = sum(1 for bucket in self._buckets if bucket)
+        return {
+            "table_size": self._table_size,
+            "item_count": self._item_count,
+            "load_factor": self.load_factor,
+            "occupied_buckets": occupied,
+            "empty_buckets": self._table_size - occupied,
+            "collision_count": self._item_count - occupied,
+            "max_chain_length": max(len(bucket) for bucket in self._buckets),
+        }
