@@ -1,12 +1,12 @@
 # Tests
 
-Tests remain outside the source package. Day 1 supplies dataset unit tests; later days will add data-structure, performance, input-handling, and integration tests.
+Tests remain outside the source package. Day 1 supplies dataset unit tests and Day 2 adds hash-table unit tests. Later days will add priority-queue, performance, input-handling, and integration tests.
 
 ```text
 tests/
 |-- README.md      # Test organization and execution
 |-- __init__.py    # Makes tests a Python package
-|-- unit/          # Tests for individual modules; dataset tests implemented
+|-- unit/          # Dataset and hash-table tests implemented
 `-- integration/   # Tests combining project features; planned for Day 4
 ```
 
