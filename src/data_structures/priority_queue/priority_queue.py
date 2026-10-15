@@ -1,5 +1,7 @@
 """Student priority queue backed by a manually maintained binary max-heap."""
 
+from src.data_structures.priority_queue.operations.insert import insert as insert_student
+from src.dataset.validator import validate_student
 from src.models.data_item import DataItem
 
 
@@ -26,3 +28,13 @@ class PriorityQueue:
 
     def __len__(self) -> int:
         return len(self._heap)
+
+    def insert(self, student: DataItem) -> None:
+        """Queue a valid student; raise ValueError for invalid or duplicate data.
+
+        IDs remain unique so search and deletion identify one record. Checking
+        uniqueness by scanning the list makes insertion O(n), including the
+        O(log n) upward heap repair. The source student is never modified.
+        """
+        validate_student(student)
+        insert_student(self._heap, student)
