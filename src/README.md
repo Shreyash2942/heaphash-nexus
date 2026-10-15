@@ -1,6 +1,6 @@
 # Source Code
 
-This package separates configuration, student records, dataset handling, algorithms, benchmarking, and user interaction. Day 1 implements `config`, `models`, and `dataset`; Day 2 adds the custom hash table. Other packages provide the foundation for later days.
+This package separates configuration, student records, dataset handling, algorithms, benchmarking, and user interaction. Day 1 implements `config`, `models`, and `dataset`; Day 2 adds the custom hash table; Day 3 adds the priority queue and binary max-heap. Other packages provide the foundation for later days.
 
 ```text
 src/
@@ -9,7 +9,7 @@ src/
 |-- config/            # Shared constants and project paths; implemented
 |-- models/            # Immutable student record; implemented
 |-- dataset/           # CSV generation, loading, and validation; implemented
-|-- data_structures/   # Hash table implemented; max-heap planned for Day 3
+|-- data_structures/   # Hash table and binary max-heap priority queue; implemented
 |-- performance/       # Linear search and benchmarking; planned for Day 4
 |-- cli/               # Interactive menus and input handling; planned for Day 5
 `-- utils/             # Shared display utilities; planned for Day 5

@@ -1,6 +1,6 @@
 # Student Dataset
 
-This folder stores the shared Day 1 CSV used by the Day 2 hash table and the planned priority queue and search comparison.
+This folder stores the shared Day 1 CSV used by the Day 2 hash table and Day 3 priority queue. The search performance comparison remains planned for Day 4.
 
 ```text
 data/
