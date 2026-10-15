@@ -1,5 +1,6 @@
 """Student priority queue backed by a manually maintained binary max-heap."""
 
+from src.data_structures.priority_queue.operations.extract_max import extract_max as remove_maximum
 from src.data_structures.priority_queue.operations.insert import insert as insert_student
 from src.dataset.validator import validate_student
 from src.models.data_item import DataItem
@@ -38,3 +39,7 @@ class PriorityQueue:
         """
         validate_student(student)
         insert_student(self._heap, student)
+
+    def extract_max(self) -> DataItem | None:
+        """Remove and return a highest-priority student, or None when empty."""
+        return remove_maximum(self._heap)
