@@ -6,6 +6,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "data"
 DATASET_PATH = DATA_DIR / "students.csv"
 RESULTS_DIR = PROJECT_ROOT / "results"
+PERFORMANCE_RESULTS_PATH = RESULTS_DIR / "performance_results.txt"
 DOCS_DIR = PROJECT_ROOT / "docs"
 
 DATASET_SIZE = 150
@@ -16,3 +17,14 @@ HASH_TABLE_SIZE = 211
 RANDOM_SEED = 42
 
 CSV_FIELDS = ("student_id", "name", "program", "priority")
+
+BENCHMARK_WARMUP = 100
+BENCHMARK_REPETITIONS = 10_000
+BENCHMARK_TARGETS = (
+    (1001, "Beginning"),
+    (1025, "Early"),
+    (1075, "Middle"),
+    (1125, "Late"),
+    (1150, "End"),
+    (9999, "Missing"),
+)
