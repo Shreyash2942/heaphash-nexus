@@ -1,14 +1,24 @@
-"""Compare verified hash and manual linear searches on a shared dataset."""
+"""Compare verified hash and manual linear searches on a shared dataset.
 
+Run ``python -m src.performance.benchmark`` from the project root after the
+correctness tests pass to save actual measurements using project defaults.
+"""
+
+import argparse
 from collections.abc import Callable, Sequence
+from pathlib import Path
 import time
 
-from src.config.settings import BENCHMARK_REPETITIONS, BENCHMARK_TARGETS, BENCHMARK_WARMUP
+from src.config.settings import (
+    BENCHMARK_REPETITIONS, BENCHMARK_TARGETS, BENCHMARK_WARMUP,
+    DATASET_PATH, PERFORMANCE_RESULTS_PATH,
+)
 from src.data_structures.hash_table import HashTable
+from src.dataset.data_loader import load_dataset
 from src.dataset.validator import validate_dataset
 from src.models.data_item import DataItem
 from src.performance.linear_search import linear_search
-from src.performance.result import BenchmarkResult, SearchTiming
+from src.performance.result import BenchmarkResult, SearchTiming, format_results, save_results
 
 
 def _measure_hash(search: Callable[[int], DataItem | None], key: int, repetitions: int) -> float:
@@ -97,3 +107,29 @@ def run_benchmark(
         dataset_size=len(students), table_size=table.table_size, warmup=warmup,
         repetitions=repetitions, timings=tuple(timings),
     )
+
+
+def main() -> None:
+    """Load the dataset once, run verified searches, then save and print results."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--dataset", type=Path, default=DATASET_PATH)
+    parser.add_argument("--output", type=Path, default=PERFORMANCE_RESULTS_PATH)
+    parser.add_argument("--warmup", type=int, default=BENCHMARK_WARMUP)
+    parser.add_argument("--repetitions", type=int, default=BENCHMARK_REPETITIONS)
+    arguments = parser.parse_args()
+    try:
+        if arguments.output.resolve() == arguments.dataset.resolve():
+            raise ValueError("results path must not overwrite the source CSV dataset")
+        records = load_dataset(arguments.dataset)
+        result = run_benchmark(
+            records, warmup=arguments.warmup, repetitions=arguments.repetitions,
+        )
+        destination = save_results(result, arguments.output)
+    except (OSError, ValueError, TypeError) as error:
+        parser.exit(status=1, message=f"Benchmark error: {error}\n")
+    print(format_results(result), end="")
+    print(f"\nResults saved to: {destination}")
+
+
+if __name__ == "__main__":
+    main()

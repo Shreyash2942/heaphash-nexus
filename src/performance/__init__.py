@@ -1,1 +1,1 @@
-"""Search comparison and benchmark reporting, implemented in Day 4."""
+"""Verified hash-versus-linear search comparison and benchmark reporting."""
