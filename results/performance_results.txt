@@ -1,0 +1,33 @@
+Hash Table vs. Linear Search Benchmark
+================================================================================================================
+Dataset records: 150
+Hash table buckets: 211
+Targets: 6
+Warm-up searches per target per algorithm: 100
+Measured repetitions per target per algorithm: 10000
+Measured searches per algorithm: 60000
+Timer: time.perf_counter()
+Measured order: hash first on alternating targets; linear first on the others.
+Setup, correctness checks, warm-up, printing, and file I/O are excluded from timing.
+Python: 3.14.4
+Platform: Windows-11-10.0.26300-SP0
+
+    ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
+----------------------------------------------------------------------------------------------------------------
+  1001 Beginning    yes       0.001112200       0.000490800        0.111220          0.049080       0.441x
+  1025 Early        yes       0.001110000       0.003926100        0.111000          0.392610       3.537x
+  1075 Middle       yes       0.001112700       0.010565200        0.111270          1.056520       9.495x
+  1125 Late         yes       0.001119500       0.017177700        0.111950          1.717770      15.344x
+  1150 End          yes       0.001126200       0.019919400        0.112620          1.991940      17.687x
+  9999 Missing      no        0.001061900       0.019405800        0.106190          1.940580      18.275x
+
+Overall hash total (s): 0.006642500
+Overall linear total (s): 0.071485000
+Overall average hash search (us): 0.110708
+Overall average linear search (us): 1.191417
+Overall linear/hash time ratio: 10.762x
+
+Average = measured total / measured searches; us means microseconds.
+Ratio = linear time / hash time; above 1 means lower hash-search time,
+below 1 means lower linear-search time. N/A means the hash timer total was zero.
+These measurements describe this run, dataset, and machine; timings vary between runs.

@@ -23,6 +23,6 @@ Run the Day 2 checks with `python -m pytest tests/unit/test_hash_table.py -v`. T
 
 Run the Day 3 checks with `python -m pytest tests/unit/test_priority_queue.py -v`. They cover insertion, search, deletion, peek, extract-max, upward and downward heap repair, invalid and duplicate records, equal priorities, empty queues, immutable snapshots, and independent queue state. Full-dataset tests use several insertion orders and validate the heap after changes. A reproducible mixed-operation workload checks against reference records without assuming an order between ties.
 
-Later days will add `test_input_handler.py` and performance/integration tests.
+Day 4 adds [integration and performance tests](../integration/README.md). Day 5 will add `test_input_handler.py`.
 
 [Test organization](../README.md)

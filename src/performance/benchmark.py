@@ -29,9 +29,10 @@ def _measure_hash(search: Callable[[int], DataItem | None], key: int, repetition
 
 
 def _measure_linear(records: tuple[DataItem, ...], key: int, repetitions: int) -> float:
+    search = linear_search
     started = time.perf_counter()
     for _ in range(repetitions):
-        linear_search(records, key)
+        search(records, key)
     return time.perf_counter() - started
 
 
