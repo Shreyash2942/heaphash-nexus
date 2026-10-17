@@ -6,7 +6,7 @@ from pathlib import Path
 from src.config.settings import DATASET_PATH, PERFORMANCE_RESULTS_PATH
 from src.data_structures.hash_table import HashTable
 from src.data_structures.priority_queue import PriorityQueue
-from src.dataset.data_loader import load_or_generate_dataset
+from src.dataset.data_loader import load_dataset, load_or_generate_dataset
 from src.models.data_item import DataItem
 
 
@@ -33,3 +33,11 @@ class Application:
             table.insert(student.student_id, student)
             queue.insert(student)
         self.records, self.hash_table, self.priority_queue = students, table, queue
+
+    def reset(self) -> None:
+        """Reload valid source records and replace both containers together.
+
+        Loading or rebuilding errors leave the current interactive state intact.
+        Reset does not generate a missing file or save interactive edits.
+        """
+        self._replace_records(load_dataset(self.dataset_path))
