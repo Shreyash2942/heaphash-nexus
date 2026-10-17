@@ -7,6 +7,7 @@ from pathlib import Path
 from src.cli.application import Application
 from src.cli.hash_table_menu import hash_table_menu
 from src.cli.navigation import run_menu
+from src.cli.priority_queue_menu import priority_queue_menu
 from src.config.settings import DATASET_PATH, PERFORMANCE_RESULTS_PATH
 
 
@@ -14,6 +15,7 @@ def run(app: Application) -> None:
     print(f"Loaded {len(app.records)} students. Changes stay in the selected structure.")
     run_menu("Main Menu", {
         "1": ("Hash Table", lambda: hash_table_menu(app)),
+        "2": ("Priority Queue", lambda: priority_queue_menu(app)),
     }, exit_label="Exit")
     print("Goodbye.")
 
