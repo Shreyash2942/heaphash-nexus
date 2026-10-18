@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1480" viewBox="0 0 1920 1480">
+<rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0" width="1920" height="125" rx="18" fill="#142D4E" stroke="#142D4E" stroke-width="3"/>
+<text x="65" y="82.1" font-family="Arial, sans-serif" font-size="49" font-weight="bold" text-anchor="start" fill="white">Project architecture</text>
+<text x="65" y="181.0" font-family="Arial, sans-serif" font-size="30" font-weight="normal" text-anchor="start" fill="#18324F">Runtime layers and workflows; each structure owns its own containers.</text>
+<rect x="710" y="220" width="500" height="105" rx="18" fill="#DEF4EE" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="281.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">main.py</text>
+<rect x="510" y="405" width="900" height="150" rx="18" fill="#DEF4EE" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="465.5" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">CLI navigation and presentation</text>
+<text x="960.0" y="511.5" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">menu.py / input_handler.py / submenu modules</text>
+<rect x="510" y="635" width="900" height="150" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="695.5" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Application state</text>
+<text x="960.0" y="741.5" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">original records + independent table and queue</text>
+<rect x="60" y="905" width="540" height="215" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="330.0" y="975.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Dataset package</text>
+<text x="330.0" y="1021.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">generation / CSV loading</text>
+<text x="330.0" y="1067.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">field and ID validation</text>
+<rect x="690" y="905" width="540" height="215" rx="18" fill="#DEF4EE" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="975.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Data structures</text>
+<text x="960.0" y="1021.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">HashTable + list chains</text>
+<text x="960.0" y="1067.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">PriorityQueue + max-heap</text>
+<rect x="1320" y="905" width="540" height="215" rx="18" fill="#FFF0CB" stroke="#18324F" stroke-width="3"/>
+<text x="1590.0" y="975.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Performance package</text>
+<text x="1590.0" y="1021.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">HashTable + manual scan</text>
+<text x="1590.0" y="1067.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">verified timing + reports</text>
+<polyline points="960,325 960,405" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,405 948,385 972,385" fill="#18324F"/>
+<polyline points="960,555 960,635" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,635 948,615 972,615" fill="#18324F"/>
+<polyline points="960,785 960,835 330,835 330,905" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="330,905 318,885 342,885" fill="#18324F"/>
+<polyline points="960,785 960,835 960,835 960,905" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,905 948,885 972,885" fill="#18324F"/>
+<polyline points="960,785 960,835 1590,835 1590,905" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="1590,905 1578,885 1602,885" fill="#18324F"/>
+<rect x="60" y="1220" width="1800" height="145" rx="18" fill="#FFF0CB" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="1278.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Shared foundations</text>
+<text x="960.0" y="1324.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">settings.py: paths/constants     |     DataItem: immutable student record</text>
+<text x="960" y="1437.9" font-family="Arial, sans-serif" font-size="31" font-weight="normal" text-anchor="middle" fill="#18324F">Unit and integration tests verify modules, workflows, and state independence.</text>
+</svg>

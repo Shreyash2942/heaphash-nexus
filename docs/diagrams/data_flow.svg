@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1480" viewBox="0 0 1920 1480">
+<rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0" width="1920" height="125" rx="18" fill="#142D4E" stroke="#142D4E" stroke-width="3"/>
+<text x="65" y="82.1" font-family="Arial, sans-serif" font-size="49" font-weight="bold" text-anchor="start" fill="white">Data flow</text>
+<text x="65" y="181.0" font-family="Arial, sans-serif" font-size="30" font-weight="normal" text-anchor="start" fill="#18324F">Source records remain unchanged during interactive edits, benchmarks, and demonstrations.</text>
+<rect x="660" y="215" width="600" height="115" rx="18" fill="#FFF0CB" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="281.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">data/students.csv (150 records)</text>
+<rect x="610" y="405" width="700" height="145" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="463.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">CSV loader + validator</text>
+<text x="960.0" y="509.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">typed DataItem records / unique IDs</text>
+<rect x="610" y="625" width="700" height="125" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="696.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Original loaded-record snapshot</text>
+<polyline points="960,330 960,405" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,405 948,385 972,385" fill="#18324F"/>
+<polyline points="960,550 960,625" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,625 948,605 972,605" fill="#18324F"/>
+<polyline points="960,750 960,800 330,800 330,875" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="330,875 318,855 342,855" fill="#18324F"/>
+<polyline points="960,750 960,800 960,800 960,875" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,875 948,855 972,855" fill="#18324F"/>
+<polyline points="960,750 960,800 1590,800 1590,875" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="1590,875 1578,855 1602,855" fill="#18324F"/>
+<rect x="60" y="875" width="540" height="205" rx="18" fill="#DEF4EE" stroke="#18324F" stroke-width="3"/>
+<text x="330.0" y="940.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Editable HashTable</text>
+<text x="330.0" y="986.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">insert / search / delete</text>
+<text x="330.0" y="1032.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">separate bucket chains</text>
+<rect x="690" y="875" width="540" height="205" rx="18" fill="#FFF0CB" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="940.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Verified benchmark</text>
+<text x="960.0" y="986.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">fresh table + linear search</text>
+<text x="960.0" y="1032.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">same records and targets</text>
+<rect x="1320" y="875" width="540" height="205" rx="18" fill="#DEF4EE" stroke="#18324F" stroke-width="3"/>
+<text x="1590.0" y="940.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Editable PriorityQueue</text>
+<text x="1590.0" y="986.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">insert / search / delete</text>
+<text x="1590.0" y="1032.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">peek / extract / validate</text>
+<rect x="60" y="1170" width="540" height="145" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="330.0" y="1228.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">CLI results and inspection</text>
+<text x="330.0" y="1274.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">records / buckets / statistics</text>
+<rect x="690" y="1170" width="540" height="145" rx="18" fill="#FFF0CB" stroke="#18324F" stroke-width="3"/>
+<text x="960.0" y="1228.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">Saved performance report</text>
+<text x="960.0" y="1274.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">results/performance_results.txt</text>
+<rect x="1320" y="1170" width="540" height="145" rx="18" fill="#E7F0FC" stroke="#18324F" stroke-width="3"/>
+<text x="1590.0" y="1228.0" font-family="Arial, sans-serif" font-size="35" font-weight="bold" text-anchor="middle" fill="#18324F">CLI results and inspection</text>
+<text x="1590.0" y="1274.0" font-family="Arial, sans-serif" font-size="35" font-weight="normal" text-anchor="middle" fill="#18324F">records / heap array / root</text>
+<polyline points="330,1080 330,1170" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="330,1170 318,1150 342,1150" fill="#18324F"/>
+<polyline points="960,1080 960,1170" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="960,1170 948,1150 972,1150" fill="#18324F"/>
+<polyline points="1590,1080 1590,1170" fill="none" stroke="#18324F" stroke-width="5"/>
+<polygon points="1590,1170 1578,1150 1602,1150" fill="#18324F"/>
+<text x="960" y="1397.9" font-family="Arial, sans-serif" font-size="31" font-weight="normal" text-anchor="middle" fill="#18324F">Reset re-reads the CSV, validates it, then replaces both interactive containers.</text>
+<text x="960" y="1447.9" font-family="Arial, sans-serif" font-size="31" font-weight="normal" text-anchor="middle" fill="#18324F">The complete demonstration uses separate containers and preserves interactive edits.</text>
+</svg>
