@@ -20,6 +20,7 @@ Final checks were completed on October 18, 2026, with Python 3.14.4 on Windows 1
 | Configuration | Dataset 150, start ID 1001, allowed priorities 1–100, seed 42, hash size 211, collision size 10, all six targets, 100/10,000 searches agree with documentation |
 | Cleanup | Two unused test imports and four obsolete directory markers removed; Python AST import audit; no TODO/FIXME/debugging or dead experimental code found in implementation review |
 | Documentation | Every maintained folder has an annotated README; all local documentation links resolve |
+| Complete project guide | Root [guide.md](../guide.md) explains setup, all menus, examples, API use, testing, results, documentation tools, packaging, and troubleshooting; linked from the main README and included in the submission |
 | Source preservation | Terminal command checks preserve both source CSV and submitted benchmark; digests recorded |
 | Requirements | [Traceability matrix](REQUIREMENT_TRACEABILITY.md) maps implemented requirements to source, tests, report pages, and evidence |
 | Submission | Clean local ZIP with payload manifest/checksum; extracted-package regression and complete demonstration recorded in local `submission/VALIDATION.json` |

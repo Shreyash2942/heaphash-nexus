@@ -34,7 +34,7 @@ def require(condition, message):
 
 def payload_files():
     files = [ROOT / name for name in (
-        "README.md", "main.py", "requirements.txt", "requirements-docs.txt", "pytest.ini", ".gitignore",
+        "README.md", "guide.md", "main.py", "requirements.txt", "requirements-docs.txt", "pytest.ini", ".gitignore",
         "data/README.md", "data/students.csv", "results/README.md", "results/performance_results.txt",
     )]
     for name in ("src", "tests", "docs", "tools"):
@@ -52,7 +52,7 @@ def payload_files():
 
 
 def build():
-    required = ["README.md", "data/students.csv", "results/performance_results.txt", "docs/final_report.docx",
+    required = ["README.md", "guide.md", "data/students.csv", "results/performance_results.txt", "docs/final_report.docx",
                 "docs/final_report.pdf", "docs/final_report.md", "docs/REQUIREMENT_TRACEABILITY.md",
                 "docs/QA_REPORT.md", "docs/SUBMISSION.md", "docs/validation/validation.json",
                 "docs/validation/test_results.xml", "docs/validation/demo_output.txt"]

@@ -110,7 +110,7 @@ def main():
     for folder in maintained:
         require((folder / "README.md").is_file(), f"missing folder README: {folder}")
     readmes = [folder / "README.md" for folder in maintained]
-    markdown_files = [ROOT / "README.md", *sorted((ROOT / "docs").rglob("*.md")),
+    markdown_files = [ROOT / "README.md", ROOT / "guide.md", *sorted((ROOT / "docs").rglob("*.md")),
                       *[path for path in readmes if not path.is_relative_to(ROOT / "docs") and path != ROOT / "README.md"]]
     links = 0
     link_targets = []

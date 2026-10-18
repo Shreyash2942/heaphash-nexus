@@ -150,24 +150,24 @@ Platform: Windows-11-10.0.26300-SP0
 
     ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
 ----------------------------------------------------------------------------------------------------------------
-  1001 Beginning    yes       0.002642800       0.001206000        0.264280          0.120600       0.456x
-  1025 Early        yes       0.002753600       0.009172000        0.275360          0.917200       3.331x
-  1075 Middle       yes       0.002624900       0.024429900        0.262490          2.442990       9.307x
-  1125 Late         yes       0.003052900       0.042709700        0.305290          4.270970      13.990x
-  1150 End          yes       0.003033700       0.047251900        0.303370          4.725190      15.576x
-  9999 Missing      no        0.002688300       0.047074800        0.268830          4.707480      17.511x
+  1001 Beginning    yes       0.001061900       0.000482100        0.106190          0.048210       0.454x
+  1025 Early        yes       0.001275200       0.003986500        0.127520          0.398650       3.126x
+  1075 Middle       yes       0.001050300       0.009717400        0.105030          0.971740       9.252x
+  1125 Late         yes       0.001052300       0.015608700        0.105230          1.560870      14.833x
+  1150 End          yes       0.001043000       0.018903100        0.104300          1.890310      18.124x
+  9999 Missing      no        0.001077000       0.018273500        0.107700          1.827350      16.967x
 
-Overall hash total (s): 0.016796200
-Overall linear total (s): 0.171844300
-Overall average hash search (us): 0.279937
-Overall average linear search (us): 2.864072
-Overall linear/hash time ratio: 10.231x
+Overall hash total (s): 0.006559700
+Overall linear total (s): 0.066971300
+Overall average hash search (us): 0.109328
+Overall average linear search (us): 1.116188
+Overall linear/hash time ratio: 10.210x
 
 Average = measured total / measured searches; us means microseconds.
 Ratio = linear time / hash time; above 1 means lower hash-search time,
 below 1 means lower linear-search time. N/A means the hash timer total was zero.
 These measurements describe this run, dataset, and machine; timings vary between runs.
-Results saved to: C:\Users\sptl2\AppData\Local\Temp\heaphash-command-check-3lhxsx5w\benchmark.txt
+Results saved to: C:\Users\sptl2\AppData\Local\Temp\heaphash-command-check-e5jjuk16\benchmark.txt
 
 Performance Comparison
 1. Run Hash vs. Linear Search Benchmark
@@ -189,18 +189,18 @@ Platform: Windows-11-10.0.26300-SP0
 
     ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
 ----------------------------------------------------------------------------------------------------------------
-  1001 Beginning    yes       0.002642800       0.001206000        0.264280          0.120600       0.456x
-  1025 Early        yes       0.002753600       0.009172000        0.275360          0.917200       3.331x
-  1075 Middle       yes       0.002624900       0.024429900        0.262490          2.442990       9.307x
-  1125 Late         yes       0.003052900       0.042709700        0.305290          4.270970      13.990x
-  1150 End          yes       0.003033700       0.047251900        0.303370          4.725190      15.576x
-  9999 Missing      no        0.002688300       0.047074800        0.268830          4.707480      17.511x
+  1001 Beginning    yes       0.001061900       0.000482100        0.106190          0.048210       0.454x
+  1025 Early        yes       0.001275200       0.003986500        0.127520          0.398650       3.126x
+  1075 Middle       yes       0.001050300       0.009717400        0.105030          0.971740       9.252x
+  1125 Late         yes       0.001052300       0.015608700        0.105230          1.560870      14.833x
+  1150 End          yes       0.001043000       0.018903100        0.104300          1.890310      18.124x
+  9999 Missing      no        0.001077000       0.018273500        0.107700          1.827350      16.967x
 
-Overall hash total (s): 0.016796200
-Overall linear total (s): 0.171844300
-Overall average hash search (us): 0.279937
-Overall average linear search (us): 2.864072
-Overall linear/hash time ratio: 10.231x
+Overall hash total (s): 0.006559700
+Overall linear total (s): 0.066971300
+Overall average hash search (us): 0.109328
+Overall average linear search (us): 1.116188
+Overall linear/hash time ratio: 10.210x
 
 Average = measured total / measured searches; us means microseconds.
 Ratio = linear time / hash time; above 1 means lower hash-search time,

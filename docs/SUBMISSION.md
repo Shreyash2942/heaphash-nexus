@@ -12,7 +12,7 @@ Use `python tools/build_submission.py --verify` to also check archive integrity 
 
 Included content:
 
-- Completed local root README, entry point, dependencies and pytest configuration.
+- Completed local root README, complete [project guide](../guide.md), entry point, dependencies and pytest configuration.
 - All implementation packages, 150-record CSV, tests and per-folder READMEs.
 - Saved final benchmark and methodology.
 - APA PDF and editable Word report, Markdown companion, metadata, diagrams, traceability, and QA evidence.
