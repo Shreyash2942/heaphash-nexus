@@ -17,4 +17,6 @@ See [dataset implementation](../src/dataset/README.md) and [unit tests](../tests
 
 The benchmark loads this CSV once and compares both search methods using the same records. [Integration tests](../tests/integration/README.md) check that operations and benchmarking preserve the source file.
 
+The [CLI](../src/cli/README.md) keeps interactive edits in memory. Reset validates and reloads this source file before rebuilding both structures; a failed reset preserves existing state. The complete demonstration uses separate containers and does not save student edits to CSV.
+
 [Project overview](../README.md)

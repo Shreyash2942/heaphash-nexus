@@ -1,6 +1,6 @@
 # Integration Tests
 
-This package implements Day 4 checks combining the real dataset, both custom data structures, and performance benchmarking.
+This package implements Day 4 checks combining the real dataset, both custom data structures, and performance benchmarking, plus Day 5 CLI workflows.
 
 ```text
 integration/
@@ -8,7 +8,8 @@ integration/
 |-- __init__.py              # Makes integration a Python package
 |-- conftest.py              # Loads the CSV once and creates fresh table/queue fixtures
 |-- test_data_structures.py  # Shared records, representative operations, and independent state
-`-- test_performance.py      # Search agreement, timing protocol, calculations, reports, and errors
+|-- test_performance.py      # Search agreement, timing protocol, calculations, reports, and errors
+`-- test_cli.py              # Menus, independent edits, reset, complete demo, and entry point
 ```
 
 The session-scoped `records` fixture loads all 150 students once as a tuple of immutable `DataItem` objects. Function-scoped `structures` fixtures populate a fresh hash table and queue from those same objects. A final fixture check confirms the source CSV stayed unchanged.
@@ -16,6 +17,8 @@ The session-scoped `records` fixture loads all 150 students once as a tuple of i
 Structure tests search 1001, 1075, 1150, and missing ID 9999; remove representative students; verify counts and heap validity; and confirm changes in one structure preserve the other. Hash duplicate updates and queue extraction are also checked for independence.
 
 Performance tests compare hash and manual linear searches, verify the default six targets and 60,000 measured searches per method, reject mismatches before timing starts, and check immutable result calculations. Synthetic clocks make arithmetic and protocol checks deterministic. File and command tests cover report saving, errors, and preservation of existing output and source data. No speed threshold is asserted.
+
+CLI tests create temporary CSV files from the shared records and use temporary report paths. They verify all submenus, hash updates versus queue duplicate rejection, empty operations, source validation, isolated benchmarks and demonstrations, atomic reset on loading/rebuilding errors, and graceful exit during input. They also run the root entry point from a different working directory and check the non-interactive demonstration flag.
 
 Run from the project root:
 

@@ -18,7 +18,7 @@ python -m pytest -v
 python -m src.performance.benchmark
 ```
 
-The benchmark command loads `data/students.csv` once, validates its 150 records, builds a fresh hash table, runs the comparison, and saves [performance_results.txt](../../results/performance_results.txt). The interactive menu remains planned for Day 5.
+The benchmark command loads `data/students.csv` once, validates its 150 records, builds a fresh hash table, runs the comparison, and saves [performance_results.txt](../../results/performance_results.txt). The same benchmark is available through the [CLI](../cli/README.md): main menu option 3 opens Performance Comparison. Interactive benchmarking uses the original loaded records in a fresh table and preserves edited interactive containers. The complete demonstration also runs and saves a verified benchmark.
 
 | Target ID | Scenario |
 |---:|---|

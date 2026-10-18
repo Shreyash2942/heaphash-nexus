@@ -1,6 +1,6 @@
 # Unit Tests
 
-These tests check one project feature at a time. Dataset tests are implemented for Day 1, hash-table tests for Day 2, and priority-queue tests for Day 3.
+These tests check one project feature at a time. Dataset tests are implemented for Day 1, hash-table tests for Day 2, priority-queue tests for Day 3, and CLI input validation for Day 5.
 
 ```text
 unit/
@@ -8,7 +8,8 @@ unit/
 |-- __init__.py             # Makes unit a Python package
 |-- test_dataset.py         # Generation, validation, CSV handling, and file preservation
 |-- test_hash_table.py      # Operations, collisions, statistics, and all 150 records
-`-- test_priority_queue.py  # Heap algorithms, operations, ties, and all 150 records
+|-- test_priority_queue.py  # Heap algorithms, operations, ties, and all 150 records
+`-- test_input_handler.py   # Choice, number, text, student prompts, and exit signals
 ```
 
 Run only the dataset tests from the project root:
@@ -23,6 +24,6 @@ Run the Day 2 checks with `python -m pytest tests/unit/test_hash_table.py -v`. T
 
 Run the Day 3 checks with `python -m pytest tests/unit/test_priority_queue.py -v`. They cover insertion, search, deletion, peek, extract-max, upward and downward heap repair, invalid and duplicate records, equal priorities, empty queues, immutable snapshots, and independent queue state. Full-dataset tests use several insertion orders and validate the heap after changes. A reproducible mixed-operation workload checks against reference records without assuming an order between ties.
 
-Day 4 adds [integration and performance tests](../integration/README.md). Day 5 will add `test_input_handler.py`.
+Day 4 adds [integration and performance tests](../integration/README.md). Day 5 adds CLI integration coverage there and `test_input_handler.py` here. Input tests check invalid menu choices, non-integer numbers, inclusive priority bounds, positive student IDs, trimmed required text, complete student prompts, and propagation of EOF/Ctrl+C to the application boundary.
 
 [Test organization](../README.md)
