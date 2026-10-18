@@ -16,3 +16,6 @@ Thumbs.db
 # Local knowledge-graph artifacts
 graphify-out/
 .graphify*
+
+# Local submission archive and extracted-package validation
+/submission/

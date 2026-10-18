@@ -14,9 +14,8 @@ import pytest
 
 from src.config.settings import (
     BENCHMARK_REPETITIONS, BENCHMARK_TARGETS, BENCHMARK_WARMUP,
-    DATASET_PATH, DATASET_SIZE, PROJECT_ROOT,
+    DATASET_PATH, PROJECT_ROOT,
 )
-from src.data_structures.hash_table import HashTable
 from src.performance import benchmark
 from src.performance.benchmark import run_benchmark
 from src.performance.linear_search import linear_search
