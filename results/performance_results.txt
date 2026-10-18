@@ -14,18 +14,18 @@ Platform: Windows-11-10.0.26300-SP0
 
     ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
 ----------------------------------------------------------------------------------------------------------------
-  1001 Beginning    yes       0.002238700       0.001113700        0.223870          0.111370       0.497x
-  1025 Early        yes       0.002262600       0.006899200        0.226260          0.689920       3.049x
-  1075 Middle       yes       0.002315300       0.018373600        0.231530          1.837360       7.936x
-  1125 Late         yes       0.001433200       0.024037700        0.143320          2.403770      16.772x
-  1150 End          yes       0.001336700       0.023415100        0.133670          2.341510      17.517x
-  9999 Missing      no        0.001913000       0.022933600        0.191300          2.293360      11.988x
+  1001 Beginning    yes       0.001509600       0.000662200        0.150960          0.066220       0.439x
+  1025 Early        yes       0.001474200       0.004862600        0.147420          0.486260       3.298x
+  1075 Middle       yes       0.001472400       0.012897900        0.147240          1.289790       8.760x
+  1125 Late         yes       0.001545400       0.022404900        0.154540          2.240490      14.498x
+  1150 End          yes       0.001474400       0.025187500        0.147440          2.518750      17.083x
+  9999 Missing      no        0.001298800       0.023843300        0.129880          2.384330      18.358x
 
-Overall hash total (s): 0.011499500
-Overall linear total (s): 0.096772900
-Overall average hash search (us): 0.191658
-Overall average linear search (us): 1.612882
-Overall linear/hash time ratio: 8.415x
+Overall hash total (s): 0.008774800
+Overall linear total (s): 0.089858400
+Overall average hash search (us): 0.146247
+Overall average linear search (us): 1.497640
+Overall linear/hash time ratio: 10.241x
 
 Average = measured total / measured searches; us means microseconds.
 Ratio = linear time / hash time; above 1 means lower hash-search time,

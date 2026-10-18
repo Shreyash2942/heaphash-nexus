@@ -1,0 +1,83 @@
+{
+  "title": "Hash Tables and Binary Max-Heaps: Design, Verification, and Performance",
+  "date": "October 18, 2026",
+  "author": null,
+  "instructor": null,
+  "benchmark": {
+    "rows": [
+      [
+        "1001",
+        "Beginning",
+        "yes",
+        "0.001509600",
+        "0.000662200",
+        "0.150960",
+        "0.066220",
+        "0.439"
+      ],
+      [
+        "1025",
+        "Early",
+        "yes",
+        "0.001474200",
+        "0.004862600",
+        "0.147420",
+        "0.486260",
+        "3.298"
+      ],
+      [
+        "1075",
+        "Middle",
+        "yes",
+        "0.001472400",
+        "0.012897900",
+        "0.147240",
+        "1.289790",
+        "8.760"
+      ],
+      [
+        "1125",
+        "Late",
+        "yes",
+        "0.001545400",
+        "0.022404900",
+        "0.154540",
+        "2.240490",
+        "14.498"
+      ],
+      [
+        "1150",
+        "End",
+        "yes",
+        "0.001474400",
+        "0.025187500",
+        "0.147440",
+        "2.518750",
+        "17.083"
+      ],
+      [
+        "9999",
+        "Missing",
+        "no",
+        "0.001298800",
+        "0.023843300",
+        "0.129880",
+        "2.384330",
+        "18.358"
+      ]
+    ],
+    "hash_total": "0.008774800",
+    "linear_total": "0.089858400",
+    "hash_average": "0.146247",
+    "linear_average": "1.497640",
+    "ratio": "10.241",
+    "source": "results/performance_results.txt",
+    "sha256": "f70fac7da6b00aaed168dad82762f3459f02a66e3fedab358242b038079dc146"
+  },
+  "test_count": 312,
+  "hash_explanation_bookmarks": [
+    "HashExplanationStart",
+    "CollisionExplanationStart",
+    "HashExplanationEnd"
+  ]
+}

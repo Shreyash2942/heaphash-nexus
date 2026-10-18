@@ -1,0 +1,9 @@
+﻿{
+    "renderer":  "Microsoft Word",
+    "renderer_version":  "16.0",
+    "total_pages":  12,
+    "hash_function_page":  4,
+    "collision_resolution_page":  5,
+    "hash_explanation_last_page":  5,
+    "docx_sha256":  "368c95e3aa8088a80a43863547f937bc86bda62aacf21db9cbce98b3c7d2a656"
+}

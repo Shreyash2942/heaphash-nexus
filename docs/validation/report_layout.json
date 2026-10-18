@@ -1,0 +1,16 @@
+{
+  "renderer": "ReportLab",
+  "total_pages": 12,
+  "hash_function_page": 4,
+  "collision_resolution_page": 5,
+  "hash_explanation_last_page": 5,
+  "embedded_fonts": [
+    "AAAAAA+TimesNewRomanPS-BoldMT",
+    "AAAAAA+TimesNewRomanPS-ItalicMT",
+    "AAAAAA+TimesNewRomanPSMT"
+  ],
+  "pdf_sha256": "33b51ec12d32094e626cb1df14f0a711ee38575445bc11bee23361d7bd1a11b4",
+  "docx_sha256": "368c95e3aa8088a80a43863547f937bc86bda62aacf21db9cbce98b3c7d2a656",
+  "paper": "US Letter; 1-inch margins; Times New Roman 12; 24-point body leading",
+  "independent_word_check": "word_layout.json"
+}
