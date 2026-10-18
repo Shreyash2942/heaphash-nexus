@@ -1,6 +1,6 @@
 # Source Code
 
-This package separates configuration, student records, dataset handling, algorithms, benchmarking, and user interaction. Days 1-4 implement the dataset, both custom structures, and the verified hash-versus-linear benchmark. Day 5 adds the interactive application, complete demonstration, and reset workflow. Academic documentation and final submission checks remain scheduled for Day 6.
+This package separates configuration, student records, dataset handling, algorithms, benchmarking, and user interaction. The completed application includes both custom structures, a verified hash-versus-linear benchmark, interactive menus, a complete demonstration, and reset. See the [academic report and final QA evidence](../docs/README.md) for the implementation analysis and submission checks.
 
 ```text
 src/

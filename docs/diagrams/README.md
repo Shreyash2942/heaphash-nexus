@@ -5,7 +5,6 @@ These figures document the completed application. PNG versions are suitable for 
 ```text
 diagrams/
 |-- README.md                 # Figure contents and regeneration instructions
-|-- .gitkeep                  # Original directory marker
 |-- project_architecture.png  # Runtime layers, shared foundations, and module responsibilities
 |-- project_architecture.svg  # Editable vector version of the architecture figure
 |-- data_flow.png             # CSV validation, independent state, benchmark, and outputs

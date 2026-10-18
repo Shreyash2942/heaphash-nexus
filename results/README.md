@@ -1,11 +1,10 @@
 # Performance Results
 
-This folder stores actual measurements from the Day 4 hash-table versus linear-search benchmark. The report was generated after the correctness suite passed.
+This folder stores the final Day 6 measurements from the hash-table versus linear-search benchmark, captured during the successful complete demonstration after all 312 correctness tests passed.
 
 ```text
 results/
 |-- README.md                # Benchmark output, reproduction, and interpretation
-|-- .gitkeep                 # Original marker for the results directory
 `-- performance_results.txt  # Measured per-target and overall search results
 ```
 
@@ -20,7 +19,7 @@ python -m src.performance.benchmark
 
 The command replaces the latest report with fresh measurements. It uses 150 records, a 211-bucket hash table, six targets, 100 warm-up searches per target per method, and 10,000 measured repetitions per target per method. Loading, construction, validation, warm-up, printing, and saving are excluded from timing.
 
-Reports can also be generated through the CLI Performance menu or Run Complete Demonstration. `python main.py --demo` runs the full demonstration without prompts and saves the latest report. `--results PATH` selects another report file for the application. The checked-in report was refreshed during the Day 5 terminal demonstration after the correctness suite passed.
+Reports can also be generated through the CLI Performance menu or Run Complete Demonstration. `python main.py --demo` runs without prompts and saves the latest report. `--results PATH` selects another report file. To preserve the submitted measurements, run `python -m src.performance.benchmark --output results/my_benchmark.txt`. If the final report is replaced, regenerate the APA report and PDF before packaging so they match.
 
 The ratio is total linear time divided by total hash time. Above 1 means lower hash time; below 1 means lower linear time. A beginning-of-list target can favor linear search, while later or missing targets scan more records. Interpret these measurements for their recorded run and environment; the tests do not assume a speed winner.
 
