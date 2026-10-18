@@ -41,6 +41,8 @@ def main():
     benchmark_path = ROOT / metadata["benchmark"]["source"]
     benchmark_hash = digest(benchmark_path)
     require(benchmark_hash == metadata["benchmark"]["sha256"], "report benchmark is stale")
+    require((ROOT / "docs/SUMMARY.md").is_file(), "implementation summary is missing")
+    require(not (ROOT / "IMPLEMENTATION_PLAN.md").exists(), "retired implementation plan remains")
     settings = runpy.run_path(str(ROOT / "src/config/settings.py"))
     documented_configuration = {
         "DATASET_SIZE": 150, "START_STUDENT_ID": 1001, "MIN_PRIORITY": 1,
@@ -174,12 +176,17 @@ def main():
                 f"broken local link: {source}: {target}")
     git_checkout = (ROOT / ".git").exists()
     if git_checkout:
-        for excluded in ("README.md", "IMPLEMENTATION_PLAN.md", "graphify-out", "submission"):
+        for excluded in ("graphify-out/", "submission/"):
             outcome = subprocess.run(["git", "check-ignore", "--quiet", excluded], cwd=ROOT)
             require(outcome.returncode == 0, f"local artifact is not excluded: {excluded}")
         tracked = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True, check=True).stdout.splitlines()
-        require(not any(name in ("README.md", "IMPLEMENTATION_PLAN.md") or name.startswith(("graphify-out/", ".graphify", "submission/")) for name in tracked),
+        require("README.md" in tracked and "docs/SUMMARY.md" in tracked,
+                "root README and implementation summary must be included in Git")
+        require(not any(name == "IMPLEMENTATION_PLAN.md" or name.startswith(("graphify-out/", ".graphify", "submission/")) for name in tracked),
                 "a local-only artifact is tracked")
+        for name in ("data/students.csv", "results/performance_results.txt"):
+            indexed = subprocess.run(["git", "show", f":{name}"], cwd=ROOT, capture_output=True, check=True).stdout
+            require(indexed == (ROOT / name).read_bytes(), f"Git changed checksummed artifact bytes: {name}")
     result = {
         "passed": True, "checked_at_utc": datetime.now(timezone.utc).isoformat(),
         "python": platform.python_version(), "platform": platform.platform(),
@@ -191,7 +198,9 @@ def main():
         "pdf_sha256": digest(pdf_path), "docx_sha256": digest(ROOT / "docs/final_report.docx"),
         "final_measurements_preserved": True, "git_checkout_checked": git_checkout,
         "local_artifacts_excluded_from_git": True if git_checkout else None,
-        "no_push_performed": True,
+        "retired_plan_replaced_by_summary": True,
+        "root_readme_in_git": True if git_checkout else None,
+        "git_checksum_artifacts_preserved": True if git_checkout else None,
     }
     (EVIDENCE / "validation.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     require(all(resolved.exists() for resolved, _, _ in link_targets), "a generated evidence link is missing")

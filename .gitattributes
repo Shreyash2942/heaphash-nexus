@@ -1,0 +1,3 @@
+# Preserve exact artifacts referenced by the report and QA SHA-256 digests.
+/data/students.csv -text
+/results/performance_results.txt -text

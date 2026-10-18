@@ -24,7 +24,7 @@ Final checks were completed on October 18, 2026, with Python 3.14.4 on Windows 1
 | Source preservation | Terminal command checks preserve both source CSV and submitted benchmark; digests recorded |
 | Requirements | [Traceability matrix](REQUIREMENT_TRACEABILITY.md) maps implemented requirements to source, tests, report pages, and evidence |
 | Submission | Clean local ZIP with payload manifest/checksum; extracted-package regression and complete demonstration recorded in local `submission/VALIDATION.json` |
-| Git constraints | Root overview/plan, graphify artifacts and local archive remain excluded from Git; no push performed |
+| Cleanup and Git policy | The retired plan is replaced by [SUMMARY.md](SUMMARY.md); root README and summary are included in Git. Graphify artifacts and the generated archive remain excluded. Dataset/result bytes are preserved for recorded checksums |
 
 The application depends only on the standard library. Tests use pytest. Optional documentation tools use python-docx, Pillow, ReportLab, and PyMuPDF; Word is used only for an independent pagination check. Word's PDF export stalled on this machine, so the final PDF is rendered directly from the generated Word content using ReportLab with embedded fonts. Both formats have independently verified pagination.
 

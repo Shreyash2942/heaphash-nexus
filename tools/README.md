@@ -23,6 +23,6 @@ On Windows with desktop Word, `powershell -NoProfile -ExecutionPolicy Bypass -Fi
 
 Run `python tools/build_submission.py` to create the ignored local submission ZIP with a payload manifest and checksum. Add `--verify` to check every payload hash and run all tests and the complete demonstration from a temporary extracted copy. Packaging uses the standard library; extracted tests use the installed pytest dependency. See [submission instructions](../docs/SUBMISSION.md).
 
-After capturing the final test output and Word layout, `python tools/verify_project.py` validates recorded test results, PDF layout and embedded fonts, benchmark agreement, folder guides, local links, imports, diagrams, documented application commands, and Git exclusions. It writes evidence under `docs/validation/` and keeps the submitted benchmark unchanged. PyMuPDF is an optional documentation dependency used for this audit.
+After capturing the final test output and Word layout, `python tools/verify_project.py` validates recorded test results, PDF layout and embedded fonts, benchmark agreement, folder guides, local links, imports, diagrams, documented application commands, the tracked root README/implementation summary, retired-plan removal, and local-artifact exclusions. It also checks that Git preserves the dataset and benchmark bytes referenced by saved checksums. It writes evidence under `docs/validation/` and keeps the submitted benchmark unchanged. PyMuPDF is an optional documentation dependency used for this audit.
 
 [Project overview](../README.md)

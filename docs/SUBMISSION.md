@@ -12,7 +12,7 @@ Use `python tools/build_submission.py --verify` to also check archive integrity 
 
 Included content:
 
-- Completed local root README, complete [project guide](../guide.md), entry point, dependencies and pytest configuration.
+- Published root README, complete [project guide](../guide.md), [implementation summary](SUMMARY.md), entry point, dependencies and pytest configuration.
 - All implementation packages, 150-record CSV, tests and per-folder READMEs.
 - Saved final benchmark and methodology.
 - APA PDF and editable Word report, Markdown companion, metadata, diagrams, traceability, and QA evidence.
@@ -31,7 +31,7 @@ python main.py --demo --results results/reviewer_demo.txt
 
 Using a separate demonstration-results path preserves the submitted benchmark and its match with the academic report. To rerun the standalone benchmark while preserving it, use `python -m src.performance.benchmark --output results/reviewer_benchmark.txt`.
 
-The final extracted-package checks are recorded locally in `submission/VALIDATION.json`, with pytest and demonstration transcripts. The generated archive remains Git-ignored. Root `README.md`, `IMPLEMENTATION_PLAN.md`, and graphify artifacts remain excluded from Git, following the project owner's instruction. No GitHub push is part of submission preparation.
+The final extracted-package checks are recorded locally in `submission/VALIDATION.json`, with pytest and demonstration transcripts. The generated archive and graphify artifacts remain Git-ignored. The root README, guide, and implementation summary are versioned project documentation. The obsolete development plan has been removed. Packaging itself does not push to GitHub; publication is a separate Git operation.
 
 The title page omits author/instructor names that were not provided. To personalize it, regenerate using `python tools/build_report.py --author "Full Name" --instructor "Instructor Name"`, regenerate the PDF, check Word pagination, refresh QA evidence, and rebuild the archive. The submission date is October 18, 2026.
 

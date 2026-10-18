@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checked_at_utc": "2026-10-18T17:07:01.072183+00:00",
+  "checked_at_utc": "2026-10-18T17:13:52.448518+00:00",
   "python": "3.14.4",
   "platform": "Windows-11-10.0.26300-SP0",
   "test_total": 312,
@@ -18,7 +18,7 @@
     "tests.unit.test_priority_queue": 71
   },
   "folder_readmes": 24,
-  "local_links_checked": 149,
+  "local_links_checked": 174,
   "python_files_audited": 63,
   "commands": [
     {
@@ -34,10 +34,10 @@
         "-m",
         "src.performance.benchmark",
         "--output",
-        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-e5jjuk16\\benchmark.txt"
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-76q9jvxd\\benchmark.txt"
       ],
       "returncode": 0,
-      "output_tail": "er linear-search time. N/A means the hash timer total was zero.\nThese measurements describe this run, dataset, and machine; timings vary between runs.\n\nResults saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-e5jjuk16\\benchmark.txt\n"
+      "output_tail": "er linear-search time. N/A means the hash timer total was zero.\nThese measurements describe this run, dataset, and machine; timings vary between runs.\n\nResults saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-76q9jvxd\\benchmark.txt\n"
     },
     {
       "arguments": [
@@ -52,16 +52,16 @@
         "main.py",
         "--demo",
         "--results",
-        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-e5jjuk16\\benchmark.txt"
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-76q9jvxd\\benchmark.txt"
       ],
       "returncode": 0,
-      "output_tail": "asurements describe this run, dataset, and machine; timings vary between runs.\n8. Results saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-e5jjuk16\\benchmark.txt\nComplete demonstration passed. Interactive structures were preserved.\n"
+      "output_tail": "asurements describe this run, dataset, and machine; timings vary between runs.\n8. Results saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-76q9jvxd\\benchmark.txt\nComplete demonstration passed. Interactive structures were preserved.\n"
     },
     {
       "arguments": [
         "main.py",
         "--results",
-        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-e5jjuk16\\benchmark.txt"
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-76q9jvxd\\benchmark.txt"
       ],
       "returncode": 0,
       "output_tail": "\n0. Exit\nChoice: Reset complete: both structures contain 150 source students.\n\nMain Menu\n1. Hash Table\n2. Priority Queue\n3. Performance Comparison\n4. Dataset Information\n5. Run Complete Demonstration\n6. Reset Data Structures\n0. Exit\nChoice: Goodbye.\n"
@@ -84,5 +84,7 @@
   "final_measurements_preserved": true,
   "git_checkout_checked": true,
   "local_artifacts_excluded_from_git": true,
-  "no_push_performed": true
+  "retired_plan_replaced_by_summary": true,
+  "root_readme_in_git": true,
+  "git_checksum_artifacts_preserved": true
 }

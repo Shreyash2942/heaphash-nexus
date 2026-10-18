@@ -27,10 +27,10 @@ This matrix maps the six-day requirements to the completed implementation and fi
 | Dataset/performance menus, demo, reset and graceful exit | Dedicated menus; reset publishes new state only after success; demo uses isolated containers | CLI integration tests include failed reset, EOF/Ctrl+C, invalid input, file errors, and preserved CSV |
 | Architecture and data-flow diagrams | [Figures](diagrams/README.md): PNG, SVG, and report figures | Source/diagram review; PNG dimensions and file presence checked during QA |
 | APA report, conclusion and references | PDF, DOCX and Markdown companion; cited primary sources; APA student-paper layout | 12 pages, embedded fonts, page numbering, two hashing pages, observed-results table, reference list |
-| Root and per-folder documentation; valid commands | Local root README and each maintained folder's README | Documented commands executed; local links and directory-guide coverage checked |
+| Root and per-folder documentation; valid commands | Published root README, complete guide, [implementation summary](SUMMARY.md), and each maintained folder's README | Documented commands executed; local links and directory-guide coverage checked |
 | Final cleanup and complete regression | Two unused imports and obsolete `.gitkeep` markers removed | [Verbose final pytest](validation/pytest_output.txt): **312 passed**; no failures/errors/skips; AST and placeholder scan |
 | Clean submission package | [Packaging guide](SUBMISSION.md), standard-library archive builder and manifest | Extracted-package pytest and complete demo, payload hash verification, ZIP integrity, exclusion checks |
-| Focused Git progression and local-only artifacts | Day 6 documentation, cleanup, QA and packaging commits | No push; root README/plan, graphify artifacts and generated archive remain excluded from Git |
+| Focused Git progression and local-only artifacts | Focused development, documentation, cleanup and packaging commits | Root README and implementation summary are versioned; retired plan is removed; graphify artifacts and generated archive remain excluded from Git |
 
 Read the [final QA record](QA_REPORT.md) for executed command details, outcomes, limitations, and artifact hashes.
 

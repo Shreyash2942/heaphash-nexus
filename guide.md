@@ -421,7 +421,7 @@ assert collisions.search(1021) is not None
 heaphash-nexus/
 |-- README.md                 # Concise overview and starting commands
 |-- guide.md                  # Complete user, developer, and submission guide
-|-- IMPLEMENTATION_PLAN.md    # Local six-day plan and verified checklist
+|-- .gitattributes            # Exact-byte preservation for dataset/result checksums
 |-- main.py                   # Thin CLI entry point
 |-- requirements.txt          # Test dependencies; application uses standard library
 |-- requirements-docs.txt     # Optional documentation tools
@@ -439,7 +439,7 @@ heaphash-nexus/
 |   `-- utils/                # Shared display formatting
 |-- tests/                    # Unit and integration tests
 |-- results/                  # Saved benchmark and optional personal experiments
-|-- docs/                     # Report, diagrams, traceability, QA evidence
+|-- docs/                     # Implementation summary, report, diagrams, and QA evidence
 |-- tools/                    # Reproducible report, verification, and packaging scripts
 `-- submission/               # Local ZIP, checksum, and extracted-package evidence
 ```
@@ -460,6 +460,7 @@ The existing report is ready to read; you do not need documentation dependencies
 - [Editable Word report](docs/final_report.docx) and [Markdown companion](docs/final_report.md).
 - [Architecture and data-flow diagrams](docs/diagrams/README.md): PNG and editable SVG.
 - [Requirement traceability](docs/REQUIREMENT_TRACEABILITY.md), [QA report](docs/QA_REPORT.md), and [validation evidence](docs/validation/README.md).
+- [Implementation summary](docs/SUMMARY.md): completed work, decisions, results, and verification from the six-day development plan.
 
 The hashing explanation occupies pages 4–5, perfect/non-perfect hashing is on page 6, the heap design is on page 7, and benchmark method/results are on pages 9–10. Author and instructor names are deliberately left blank as requested by the project owner.
 
@@ -502,7 +503,7 @@ The ZIP has one `heaphash-nexus/` top-level folder and a `SUBMISSION_MANIFEST.js
 
 The package excludes Git internals, environments, caches, Office lock files, local graphify output, the original implementation plan, and temporary experiment files. Only the default CSV and final benchmark are included from `data/` and `results/`.
 
-The root README and implementation plan remain local-only Git exclusions at the owner's request. Graphify artifacts and `submission/` are also excluded from Git. This guide is ordinary project documentation and is included in the package. No packaging command pushes to GitHub.
+The root README, this guide, and `docs/SUMMARY.md` are versioned project documentation and are included in the package. The obsolete implementation plan has been removed after its useful history was summarized. Graphify artifacts and `submission/` remain excluded from Git. No packaging command pushes to GitHub.
 
 For a reviewer, extract the ZIP, enter its project folder, install `requirements.txt`, run `python -m pytest -v`, then use `python main.py` or the alternate-output demonstration command. See [docs/SUBMISSION.md](docs/SUBMISSION.md).
 
