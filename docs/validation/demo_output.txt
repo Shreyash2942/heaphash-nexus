@@ -1,0 +1,56 @@
+1. Loaded and validated 150 students.
+2. Hash table insert, search, and delete passed.
+Collision demonstration (separate size-10 table)
+Student 1001 maps to bucket 1.
+Student 1011 maps to bucket 1.
+Student 1021 maps to bucket 1.
+Hash table: 3 students in 10 buckets
+Bucket 1:
+  ID: 1001 | Name: Student 1001 | Program: Demonstration | Priority: 50
+  ID: 1011 | Name: Student 1011 | Program: Demonstration | Priority: 50
+  ID: 1021 | Name: Student 1021 | Program: Demonstration | Priority: 50
+Deleted 1011; 1001 and 1021 remain searchable. Collision demonstration passed.
+Hash table: 2 students in 10 buckets
+Bucket 1:
+  ID: 1001 | Name: Student 1001 | Program: Demonstration | Priority: 50
+  ID: 1021 | Name: Student 1021 | Program: Demonstration | Priority: 50
+3. Separate chaining and collision deletion passed.
+4. Priority queue insert, search, and delete passed.
+5. Peek and extract-max passed; hash-table contents stayed independent.
+6. Max-heap validation passed.
+7. Hash and linear search agreement and benchmarking completed.
+Hash Table vs. Linear Search Benchmark
+================================================================================================================
+Dataset records: 150
+Hash table buckets: 211
+Targets: 6
+Warm-up searches per target per algorithm: 100
+Measured repetitions per target per algorithm: 10000
+Measured searches per algorithm: 60000
+Timer: time.perf_counter()
+Measured order: hash first on alternating targets; linear first on the others.
+Setup, correctness checks, warm-up, printing, and file I/O are excluded from timing.
+Python: 3.14.4
+Platform: Windows-11-10.0.26300-SP0
+
+    ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
+----------------------------------------------------------------------------------------------------------------
+  1001 Beginning    yes       0.001509600       0.000662200        0.150960          0.066220       0.439x
+  1025 Early        yes       0.001474200       0.004862600        0.147420          0.486260       3.298x
+  1075 Middle       yes       0.001472400       0.012897900        0.147240          1.289790       8.760x
+  1125 Late         yes       0.001545400       0.022404900        0.154540          2.240490      14.498x
+  1150 End          yes       0.001474400       0.025187500        0.147440          2.518750      17.083x
+  9999 Missing      no        0.001298800       0.023843300        0.129880          2.384330      18.358x
+
+Overall hash total (s): 0.008774800
+Overall linear total (s): 0.089858400
+Overall average hash search (us): 0.146247
+Overall average linear search (us): 1.497640
+Overall linear/hash time ratio: 10.241x
+
+Average = measured total / measured searches; us means microseconds.
+Ratio = linear time / hash time; above 1 means lower hash-search time,
+below 1 means lower linear-search time. N/A means the hash timer total was zero.
+These measurements describe this run, dataset, and machine; timings vary between runs.
+8. Results saved to: C:\Users\sptl2\OneDrive\Documents\CSU Global\CSC506 Design and Analysis of Algorithms\Module 5 Critical Thinking\heaphash-nexus\results\performance_results.txt
+Complete demonstration passed. Interactive structures were preserved.

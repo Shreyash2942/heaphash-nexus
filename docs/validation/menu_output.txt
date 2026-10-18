@@ -1,0 +1,283 @@
+Loaded 150 students. Changes stay in the selected structure.
+
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: Choose one of: 1, 2, 3, 4, 5, 6, 0.
+Choice: 
+Hash Table
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Display Hash Table
+5. Show Collision Demonstration
+6. Show Hash Table Statistics
+0. Back
+Choice: Collision demonstration (separate size-10 table)
+Student 1001 maps to bucket 1.
+Student 1011 maps to bucket 1.
+Student 1021 maps to bucket 1.
+Hash table: 3 students in 10 buckets
+Bucket 1:
+  ID: 1001 | Name: Student 1001 | Program: Demonstration | Priority: 50
+  ID: 1011 | Name: Student 1011 | Program: Demonstration | Priority: 50
+  ID: 1021 | Name: Student 1021 | Program: Demonstration | Priority: 50
+Deleted 1011; 1001 and 1021 remain searchable. Collision demonstration passed.
+Hash table: 2 students in 10 buckets
+Bucket 1:
+  ID: 1001 | Name: Student 1001 | Program: Demonstration | Priority: 50
+  ID: 1021 | Name: Student 1021 | Program: Demonstration | Priority: 50
+
+Hash Table
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Display Hash Table
+5. Show Collision Demonstration
+6. Show Hash Table Statistics
+0. Back
+Choice: Students: 150
+Buckets: 211
+Load factor: 0.7109
+Occupied buckets: 150
+Empty buckets: 61
+Current collisions: 0
+Longest chain: 1
+
+Hash Table
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Display Hash Table
+5. Show Collision Demonstration
+6. Show Hash Table Statistics
+0. Back
+Choice: Student ID: ID: 1001 | Name: Parker Baker | Program: Computer Science | Priority: 95
+
+Hash Table
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Display Hash Table
+5. Show Collision Demonstration
+6. Show Hash Table Statistics
+0. Back
+Choice: 
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: 
+Priority Queue
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Peek Highest Priority
+5. Extract Maximum
+6. Display Heap
+7. Validate Heap
+0. Back
+Choice: Highest priority: ID: 1029 | Name: Casey Patel | Program: Cybersecurity | Priority: 99
+
+Priority Queue
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Peek Highest Priority
+5. Extract Maximum
+6. Display Heap
+7. Validate Heap
+0. Back
+Choice: Extracted: ID: 1029 | Name: Casey Patel | Program: Cybersecurity | Priority: 99
+
+Priority Queue
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Peek Highest Priority
+5. Extract Maximum
+6. Display Heap
+7. Validate Heap
+0. Back
+Choice: Heap is valid.
+
+Priority Queue
+1. Insert Student
+2. Search Student
+3. Delete Student
+4. Peek Highest Priority
+5. Extract Maximum
+6. Display Heap
+7. Validate Heap
+0. Back
+Choice: 
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: 
+Performance Comparison
+1. Run Hash vs. Linear Search Benchmark
+2. View Latest Results
+0. Back
+Choice: Benchmarking the original 150 loaded students.
+Hash Table vs. Linear Search Benchmark
+================================================================================================================
+Dataset records: 150
+Hash table buckets: 211
+Targets: 6
+Warm-up searches per target per algorithm: 100
+Measured repetitions per target per algorithm: 10000
+Measured searches per algorithm: 60000
+Timer: time.perf_counter()
+Measured order: hash first on alternating targets; linear first on the others.
+Setup, correctness checks, warm-up, printing, and file I/O are excluded from timing.
+Python: 3.14.4
+Platform: Windows-11-10.0.26300-SP0
+
+    ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
+----------------------------------------------------------------------------------------------------------------
+  1001 Beginning    yes       0.002642800       0.001206000        0.264280          0.120600       0.456x
+  1025 Early        yes       0.002753600       0.009172000        0.275360          0.917200       3.331x
+  1075 Middle       yes       0.002624900       0.024429900        0.262490          2.442990       9.307x
+  1125 Late         yes       0.003052900       0.042709700        0.305290          4.270970      13.990x
+  1150 End          yes       0.003033700       0.047251900        0.303370          4.725190      15.576x
+  9999 Missing      no        0.002688300       0.047074800        0.268830          4.707480      17.511x
+
+Overall hash total (s): 0.016796200
+Overall linear total (s): 0.171844300
+Overall average hash search (us): 0.279937
+Overall average linear search (us): 2.864072
+Overall linear/hash time ratio: 10.231x
+
+Average = measured total / measured searches; us means microseconds.
+Ratio = linear time / hash time; above 1 means lower hash-search time,
+below 1 means lower linear-search time. N/A means the hash timer total was zero.
+These measurements describe this run, dataset, and machine; timings vary between runs.
+Results saved to: C:\Users\sptl2\AppData\Local\Temp\heaphash-command-check-3lhxsx5w\benchmark.txt
+
+Performance Comparison
+1. Run Hash vs. Linear Search Benchmark
+2. View Latest Results
+0. Back
+Choice: Hash Table vs. Linear Search Benchmark
+================================================================================================================
+Dataset records: 150
+Hash table buckets: 211
+Targets: 6
+Warm-up searches per target per algorithm: 100
+Measured repetitions per target per algorithm: 10000
+Measured searches per algorithm: 60000
+Timer: time.perf_counter()
+Measured order: hash first on alternating targets; linear first on the others.
+Setup, correctness checks, warm-up, printing, and file I/O are excluded from timing.
+Python: 3.14.4
+Platform: Windows-11-10.0.26300-SP0
+
+    ID Scenario     Found  Hash total (s)  Linear total (s)   Hash avg (us)   Linear avg (us)  Linear/hash
+----------------------------------------------------------------------------------------------------------------
+  1001 Beginning    yes       0.002642800       0.001206000        0.264280          0.120600       0.456x
+  1025 Early        yes       0.002753600       0.009172000        0.275360          0.917200       3.331x
+  1075 Middle       yes       0.002624900       0.024429900        0.262490          2.442990       9.307x
+  1125 Late         yes       0.003052900       0.042709700        0.305290          4.270970      13.990x
+  1150 End          yes       0.003033700       0.047251900        0.303370          4.725190      15.576x
+  9999 Missing      no        0.002688300       0.047074800        0.268830          4.707480      17.511x
+
+Overall hash total (s): 0.016796200
+Overall linear total (s): 0.171844300
+Overall average hash search (us): 0.279937
+Overall average linear search (us): 2.864072
+Overall linear/hash time ratio: 10.231x
+
+Average = measured total / measured searches; us means microseconds.
+Ratio = linear time / hash time; above 1 means lower hash-search time,
+below 1 means lower linear-search time. N/A means the hash timer total was zero.
+These measurements describe this run, dataset, and machine; timings vary between runs.
+
+Performance Comparison
+1. Run Hash vs. Linear Search Benchmark
+2. View Latest Results
+0. Back
+Choice: 
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: 
+Dataset Information
+1. Show Dataset Information
+2. Preview First 10 Students
+3. Validate Source CSV
+0. Back
+Choice: Source CSV: C:\Users\sptl2\OneDrive\Documents\CSU Global\CSC506 Design and Analysis of Algorithms\Module 5 Critical Thinking\heaphash-nexus\data\students.csv
+Loaded students: 150
+Student IDs: 1001-1150
+Priorities: 1-99
+Interactive edits do not change these source records.
+
+Dataset Information
+1. Show Dataset Information
+2. Preview First 10 Students
+3. Validate Source CSV
+0. Back
+Choice: Showing 10 of 150 loaded students:
+ID: 1001 | Name: Parker Baker | Program: Computer Science | Priority: 95
+ID: 1002 | Name: Drew Chen | Program: Information Technology | Priority: 18
+ID: 1003 | Name: Quinn Baker | Program: Healthcare Administration | Priority: 95
+ID: 1004 | Name: Taylor Lee | Program: Computer Science | Priority: 76
+ID: 1005 | Name: Harper Adams | Program: Computer Science | Priority: 12
+ID: 1006 | Name: Casey Chen | Program: Accounting | Priority: 78
+ID: 1007 | Name: Alex Lee | Program: Information Technology | Priority: 92
+ID: 1008 | Name: Parker Robinson | Program: Accounting | Priority: 54
+ID: 1009 | Name: Casey Kim | Program: Accounting | Priority: 36
+ID: 1010 | Name: Riley Wilson | Program: Computer Science | Priority: 98
+
+Dataset Information
+1. Show Dataset Information
+2. Preview First 10 Students
+3. Validate Source CSV
+0. Back
+Choice: Dataset valid: 150 students with unique IDs and valid fields.
+
+Dataset Information
+1. Show Dataset Information
+2. Preview First 10 Students
+3. Validate Source CSV
+0. Back
+Choice: 
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: Reset complete: both structures contain 150 source students.
+
+Main Menu
+1. Hash Table
+2. Priority Queue
+3. Performance Comparison
+4. Dataset Information
+5. Run Complete Demonstration
+6. Reset Data Structures
+0. Exit
+Choice: Goodbye.

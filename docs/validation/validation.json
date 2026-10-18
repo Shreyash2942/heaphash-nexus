@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "checked_at_utc": "2026-10-18T15:23:52.326648+00:00",
+  "python": "3.14.4",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "test_total": 312,
+  "test_categories": {
+    "integration": 101,
+    "unit": 211
+  },
+  "tests_by_module": {
+    "tests.integration.test_cli": 28,
+    "tests.integration.test_data_structures": 15,
+    "tests.integration.test_performance": 58,
+    "tests.unit.test_dataset": 74,
+    "tests.unit.test_hash_table": 49,
+    "tests.unit.test_input_handler": 17,
+    "tests.unit.test_priority_queue": 71
+  },
+  "folder_readmes": 24,
+  "local_links_checked": 126,
+  "python_files_audited": 63,
+  "commands": [
+    {
+      "arguments": [
+        "-m",
+        "src.dataset.data_generator"
+      ],
+      "returncode": 0,
+      "output_tail": "Preserved existing dataset: C:\\Users\\sptl2\\OneDrive\\Documents\\CSU Global\\CSC506 Design and Analysis of Algorithms\\Module 5 Critical Thinking\\heaphash-nexus\\data\\students.csv (150 records)\n"
+    },
+    {
+      "arguments": [
+        "-m",
+        "src.performance.benchmark",
+        "--output",
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-3lhxsx5w\\benchmark.txt"
+      ],
+      "returncode": 0,
+      "output_tail": "er linear-search time. N/A means the hash timer total was zero.\nThese measurements describe this run, dataset, and machine; timings vary between runs.\n\nResults saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-3lhxsx5w\\benchmark.txt\n"
+    },
+    {
+      "arguments": [
+        "main.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "output_tail": "-dataset DATASET] [--results RESULTS] [--demo]\n\nHash Table and Priority Queue Project\n\noptions:\n  -h, --help         show this help message and exit\n  --dataset DATASET\n  --results RESULTS\n  --demo             run the complete demonstration and exit\n"
+    },
+    {
+      "arguments": [
+        "main.py",
+        "--demo",
+        "--results",
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-3lhxsx5w\\benchmark.txt"
+      ],
+      "returncode": 0,
+      "output_tail": "asurements describe this run, dataset, and machine; timings vary between runs.\n8. Results saved to: C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-3lhxsx5w\\benchmark.txt\nComplete demonstration passed. Interactive structures were preserved.\n"
+    },
+    {
+      "arguments": [
+        "main.py",
+        "--results",
+        "C:\\Users\\sptl2\\AppData\\Local\\Temp\\heaphash-command-check-3lhxsx5w\\benchmark.txt"
+      ],
+      "returncode": 0,
+      "output_tail": "\n0. Exit\nChoice: Reset complete: both structures contain 150 source students.\n\nMain Menu\n1. Hash Table\n2. Priority Queue\n3. Performance Comparison\n4. Dataset Information\n5. Run Complete Demonstration\n6. Reset Data Structures\n0. Exit\nChoice: Goodbye.\n"
+    }
+  ],
+  "documented_configuration": {
+    "DATASET_SIZE": 150,
+    "START_STUDENT_ID": 1001,
+    "MIN_PRIORITY": 1,
+    "MAX_PRIORITY": 100,
+    "HASH_TABLE_SIZE": 211,
+    "RANDOM_SEED": 42,
+    "BENCHMARK_WARMUP": 100,
+    "BENCHMARK_REPETITIONS": 10000
+  },
+  "dataset_sha256": "7a6711359b787c15fe8011972f2626ca4c4f9f0eba8cb37111031a735e09c6da",
+  "benchmark_sha256": "f70fac7da6b00aaed168dad82762f3459f02a66e3fedab358242b038079dc146",
+  "pdf_sha256": "33b51ec12d32094e626cb1df14f0a711ee38575445bc11bee23361d7bd1a11b4",
+  "docx_sha256": "368c95e3aa8088a80a43863547f937bc86bda62aacf21db9cbce98b3c7d2a656",
+  "final_measurements_preserved": true,
+  "git_checkout_checked": true,
+  "local_artifacts_excluded_from_git": true,
+  "no_push_performed": true
+}
